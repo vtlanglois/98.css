@@ -154,6 +154,20 @@
     </div>
 
         <p>
+          You can add the class <code>default</code> to any button to apply additional styling, 
+          useful when communicating to the user what default action would happen in the active window if 
+          the <kbd>Enter</kbd> key was pressed on Windows 98.
+        </p>
+
+        <div class="example">
+      <button class="default">OK</button>
+      <details>
+        <summary>Show code</summary>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;default&quot;</span>&gt;</span>OK<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
+      </details>
+    </div>
+
+        <p>
           When buttons are clicked, the raised borders become sunken.
           The following button is simulated to be in the pressed (active) state.
         </p>
@@ -1053,6 +1067,46 @@
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window-body&quot;</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>There&#x27;s so much room for activities!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+      </details>
+    </div>
+
+        <p>
+          To apply custom selection styling to children of a <code>window-body</code> element, you can add the optional <code>color-highlight</code> class. Note that overriding selection styling may impact <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::selection#accessibility_concerns">accessibility</a>, so use at your own discretion. 
+        </p>
+        
+        <div class="example">
+      <div class="window" style="width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">A Window With Stuff In It</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p class="color-highlight">You can highlight me and a custom <code>::selection</code> styling will be present!</p>
+
+    <p> I have no custom <code>::selection</code> styling</p>
+  </div>
+</div>
+      <details>
+        <summary>Show code</summary>
+        <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 300px&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-text&quot;</span>&gt;</span>A Window With Stuff In It<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar-controls&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Minimize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Maximize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window-body&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;color-highlight&quot;</span>&gt;</span>You can highlight me and a custom <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>::selection<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> styling will be present!<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> I have no custom <span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>::selection<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span> styling<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
       </details>
